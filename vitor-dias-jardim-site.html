@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitor Dias Jardim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F7F5;
+    --ink:#16242B;
+    --ink-soft:#3E4C51;
+    --teal:#1F5C56;
+    --clay:#A85C32;
+    --sage:#E7ECE8;
+    --line:#D6DBD7;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--clay); outline-offset:3px;}
+  .wrap{
+    max-width:700px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* HERO */
+  .hero{
+    padding:88px 0 56px;
+    opacity:0;
+    animation:rise .7s ease forwards;
+  }
+  @keyframes rise{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 3.4rem);
+    line-height:1.05;
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+  }
+  .hero .role{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 28px;
+    max-width:38ch;
+  }
+  .hero .location{
+    font-size:0.9rem;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--teal); display:inline-block;
+  }
+
+  /* STAT BLOCK */
+  .stat{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:40px 0;
+    margin:8px 0 64px;
+    display:flex;
+    align-items:baseline;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .stat .num{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:clamp(3.2rem, 11vw, 5rem);
+    color:var(--clay);
+    line-height:1;
+  }
+  .stat .cap{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    max-width:34ch;
+  }
+  .stat .cap strong{color:var(--ink); font-weight:600;}
+
+  /* SECTIONS */
+  section{margin-bottom:60px;}
+  .sec-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+  }
+  .sec-head .mark{
+    width:9px; height:9px;
+    background:var(--teal);
+  }
+  .sec-head h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.25rem;
+    margin:0;
+  }
+  section p{
+    color:var(--ink-soft);
+    margin:0 0 14px;
+    max-width:64ch;
+  }
+  section p:last-child{margin-bottom:0;}
+
+  .entry{
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .entry:last-child{border-bottom:1px solid var(--line);}
+  .entry .title{
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 3px;
+  }
+  .entry .meta{
+    font-size:0.88rem;
+    color:var(--teal);
+    margin:0 0 8px;
+  }
+  .entry p{margin:0; font-size:0.96rem;}
+  .entry a{font-size:0.88rem; text-decoration:none; border-bottom:1px solid var(--line);}
+  .entry a:hover{border-color:var(--teal);}
+
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+  .tag{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    background:var(--sage);
+    padding:4px 10px;
+  }
+
+  footer{
+    padding:40px 0 80px;
+    border-top:1px solid var(--line);
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  footer a{color:var(--ink); font-weight:500;}
+
+  @media (max-width:520px){
+    .hero{padding-top:56px;}
+    .stat{flex-direction:column; gap:8px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Vitor Dias Jardim</h1>
+    <p class="role">Fourth-year medical student building practical AI tools inside real clinics — heading toward orthopedics and sports medicine.</p>
+    <div class="location"><span class="dot"></span>Belo Horizonte, Minas Gerais, Brazil</div>
+  </div>
+
+  <div class="stat">
+    <div class="num">250</div>
+    <div class="cap">minutes of physician time reclaimed <strong>per week</strong>, per doctor, after I built an AI documentation workflow with Claude for a public health clinic in the SUS system.</div>
+  </div>
+
+  <section id="about">
+    <div class="sec-head"><span class="mark"></span><h2>About</h2></div>
+    <p>I'm a medical student at Faculdade Ciências Médicas de Minas Gerais (FCM-MG). Brazil's public health system caps most consultations at around 15 minutes — so I set out to see how much of that time was being lost to paperwork instead of patients, and whether AI could give some of it back.</p>
+    <p>It could. That project changed how I think about AI in medicine: not as a replacement for anything, but as a way to return time and attention to the people who need it most.</p>
+  </section>
+
+  <section id="project">
+    <div class="sec-head"><span class="mark"></span><h2>Featured project</h2></div>
+    <div class="entry">
+      <p class="title">AI-assisted clinical documentation workflow</p>
+      <p class="meta">Public health clinic (SUS) · Built with Claude</p>
+      <p>Designed and implemented an automation workflow for PEC (Prontuário Eletrônico do Cidadão), the record system used across Brazilian public clinics, to handle repetitive documentation the system doesn't streamline on its own.</p>
+      <div class="tags">
+        <span class="tag">2–3 min saved per 15-min visit</span>
+        <span class="tag">~25 daily consultations</span>
+        <span class="tag">Self-initiated, end to end</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="sec-head"><span class="mark"></span><h2>Research &amp; publications</h2></div>
+    <div class="entry">
+      <p class="title">AI in early diagnosis of pancreatic ductal carcinoma via imaging</p>
+      <p class="meta">Cadernos Cajuína, v.11 n.1, 2026</p>
+      <a href="https://doi.org/10.52641/cadcajv11i1.1830" target="_blank" rel="noopener">doi.org/10.52641/cadcajv11i1.1830</a>
+    </div>
+    <div class="entry">
+      <p class="title">The role of genetics in predisposition to bipolar disorder</p>
+      <p class="meta">Cadernos Cajuína, v.11 n.1, 2026</p>
+      <a href="https://doi.org/10.52641/cadcajv11i1.1836" target="_blank" rel="noopener">doi.org/10.52641/cadcajv11i1.1836</a>
+    </div>
+    <div class="entry">
+      <p class="title">Atopic dermatitis in early childhood: diagnosis &amp; management</p>
+      <p class="meta">Book chapter · "Ecos da Saúde" e-book, II COINSUS, 2024</p>
+      <p>ISBN 978-65-85639-07-1</p>
+    </div>
+    <div class="entry">
+      <p class="title">History and current clinical management of gonorrhea</p>
+      <p class="meta">Book chapter · Editora Pasteur, 2024</p>
+      <a href="https://doi.org/10.59290/978-65-6029-129-4.20" target="_blank" rel="noopener">doi.org/10.59290/978-65-6029-129-4.20</a>
+    </div>
+    <div class="entry">
+      <p class="title">Psilocybin for treatment-resistant depression: an evidence review</p>
+      <p class="meta">Revista Caderno Pedagógico, v.21 n.9, 2024</p>
+      <a href="https://doi.org/10.54033/cadpedv21n9-306" target="_blank" rel="noopener">doi.org/10.54033/cadpedv21n9-306</a>
+    </div>
+    <div class="entry">
+      <p class="title">Arrhythmogenic right ventricular dysplasia: diagnosis &amp; prognosis</p>
+      <p class="meta">Poster abstract · III COINSUS, 2024</p>
+      <p>ISBN 978-65-85639-08-8</p>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <div class="sec-head"><span class="mark"></span><h2>Leadership &amp; activities</h2></div>
+    <div class="entry">
+      <p class="title">Class representative (Líder de Turma)</p>
+      <p class="meta">FCM-MG · 1st–6th semester, 2022–2025</p>
+      <p>Elected by peers for six consecutive semesters as the liaison between students and faculty.</p>
+    </div>
+    <div class="entry">
+      <p class="title">Teaching assistant, Minor Surgery</p>
+      <p class="meta">FCM-MG</p>
+    </div>
+    <div class="entry">
+      <p class="title">Member, Anatomy Academic League</p>
+      <p class="meta">UFMG · 1 year, concluded July 2026</p>
+    </div>
+    <div class="entry">
+      <p class="title">Public health clerkship</p>
+      <p class="meta">Rural Minas Gerais · Current</p>
+    </div>
+  </section>
+
+  <section id="ahead">
+    <div class="sec-head"><span class="mark"></span><h2>Path ahead</h2></div>
+    <p>I'm heading toward orthopedics and sports medicine — a practice where AI-supported diagnostics and rehabilitation planning help patients heal faster and get back to performing at their best.</p>
+  </section>
+
+  <footer>
+    <div class="wrap" style="padding:0;">
+      <p>Get in touch — <a href="mailto:your.email@example.com">your.email@example.com</a> · <a href="#">LinkedIn</a></p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
